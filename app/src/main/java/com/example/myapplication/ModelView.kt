@@ -1,18 +1,16 @@
-package com.example.myapplication
+package com.example.simondice
 
 import android.util.Log
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.ViewModel
 
-
-class ModelView : ViewModel() {
+class ModelView: ViewModel() {
     private val TAG_LOG:String = "Debuguer"
-     var _numbers = mutableStateOf(0)
+    var _numbers = mutableStateOf(0)
     var texto: MutableState<String> = mutableStateOf("Numero generado")
-     var isCorrect: MutableState<Boolean?> = mutableStateOf(null)
+    var isCorrect: MutableState<Boolean?> = mutableStateOf(null)
     init {
         crearRandomBoton()
     }
@@ -23,7 +21,7 @@ class ModelView : ViewModel() {
     }
 
 
-    fun darColor(numColor: Int): Color{
+    fun darColor(numColor: Int): Color {
         return when(numColor){
             1 -> Color.Red
             2 -> Color.Blue
@@ -41,9 +39,4 @@ class ModelView : ViewModel() {
         texto.value = if (resultado) "Correcto" else "Incorrecto"
         return resultado
     }
-
-
-
 }
-
-

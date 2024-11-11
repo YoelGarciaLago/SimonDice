@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.simondice
 
 import androidx.compose.ui.graphics.Color
 
@@ -7,5 +7,4 @@ object Datos {
     enum class coloresJuego(rgb: Int, colorBoton: Color){
         ROJO(1, Color.Red),AZUL(2, Color.Blue),VERDE(3, Color.Green),GRIS(4, Color.Gray);
     }
-
 }
